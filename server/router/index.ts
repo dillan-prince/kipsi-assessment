@@ -1,11 +1,12 @@
 import express from "express";
+import expenseRouter from "./expense";
+import projectRouter from "./project";
 
 const router = express.Router();
 
 export default (): express.Router => {
-  router.get("/", (req: express.Request, res: express.Response) => {
-    res.status(200).json({ message: "Hello world" }).end();
-  });
+  projectRouter(router);
+  expenseRouter(router);
 
   return router;
 };
