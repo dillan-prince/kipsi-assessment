@@ -1,0 +1,13 @@
+{
+  "name": "node-react-ts-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/index.ts",
+  "scripts": {
+    "install": "npm install --prefix client && npm install --prefix server",
+    "start": "npx concurrently \"npm start --prefix client\" \"npm start --prefix server\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
